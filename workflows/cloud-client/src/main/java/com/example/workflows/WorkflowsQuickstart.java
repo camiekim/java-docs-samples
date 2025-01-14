@@ -61,7 +61,7 @@ public class WorkflowsQuickstart {
       CreateExecutionRequest request =
           CreateExecutionRequest.newBuilder()
               .setParent(parent.toString())
-              .setExecution(Execution.newBuilder().build())
+              .setExecution(Execution.newBuilder().setArgument("{\"searchTerm\":\"Friday\"}").build())
               .build();
       Execution response = executionsClient.createExecution(request);
 
